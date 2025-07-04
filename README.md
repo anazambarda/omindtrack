@@ -1,4 +1,4 @@
-# 🧠 oMindTrack
+# 🧠 MindTrack
 
 Sistema web para rastreamento de saúde mental utilizando o questionário **SRQ-20**.  
 Usuários respondem às perguntas e têm sua pontuação automaticamente estratificada.
