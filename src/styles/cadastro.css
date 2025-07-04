@@ -1,0 +1,85 @@
+/* src/styles/cadastro.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../assets/backgroud.png'); /* ou outro fundo */
+  background-size: cover;
+  background-position: center;
+}
+
+.cadastro-container {
+  width: 450px;
+  margin: 4% auto;
+  background: white;
+  border: 8px solid #fbb040;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro-container h2 {
+  font-size: 32px;
+  color: #f7931e;
+  margin-bottom: 10px;
+}
+
+.cadastro-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.cadastro-container input[type="text"],
+.cadastro-container input[type="email"],
+.cadastro-container input[type="password"],
+.cadastro-container input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ffe0b2;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cadastro-container input::placeholder {
+  color: #666;
+}
+
+.cadastro-container .genero-group {
+  margin-bottom: 20px;
+}
+
+.cadastro-container .genero-group label {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+.cadastro-container button {
+  width: 100%;
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.cadastro-container button:hover {
+  background-color: #e67c0b;
+}
+.erro-cadastro {
+  margin-top: 16px;
+  color: #c62828;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+}

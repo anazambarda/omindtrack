@@ -1,0 +1,80 @@
+/* src/styles/login.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../assets/backgroud.png'); /* ou a imagem de fundo desejada */
+  background-size: cover;
+  background-position: center;
+}
+
+.login-container {
+  width: 400px;
+  margin: 5% auto;
+  background: white;
+  border: 8px solid #fbb040;
+  border-radius: 8px;
+  padding: 30px 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  font-size: 32px;
+  color: #f7931e;
+  margin-bottom: 10px;
+}
+
+.login-container p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ffe0b2;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-container input::placeholder {
+  color: #666;
+}
+
+.login-container a {
+  color: #f7931e;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-container a:hover {
+  text-decoration: underline;
+}
+
+.login-container button {
+  width: 100%;
+  background-color: #f7931e;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.login-container button:hover {
+  background-color: #e67c0b;
+}
+.erro-login {
+  margin-top: 16px;
+  color: #c62828;
+  font-size: 14px;
+  text-align: center;
+  background-color: #ffebee;
+  padding: 10px;
+  border-radius: 4px;
+}
