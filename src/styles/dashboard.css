@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffb733;
+  color: #333;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #ffb733;
+  text-align: center;
+}
+
+.filtro-form {
+  margin-bottom: 40px;
+}
+
+.filtro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 25px;
+}
+
+.filtro-item label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.filtro-item input,
+.filtro-item select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+.filtro-item input:focus,
+.filtro-item select:focus {
+  border-color: #ffb733;
+  outline: none;
+  background-color: #fff;
+}
+
+.botao-filtro {
+  display: block;
+  margin: 0 auto 20px;
+  padding: 12px 30px;
+  background-color: #ffb733;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao-filtro:hover {
+  background-color: #eaa021;
+}
+
+.metrics-section {
+  margin-bottom: 50px;
+}
+
+.metrics-section ul {
+  list-style-type: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.metrics-section ul li {
+  margin: 12px 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.metrics-section ul li strong {
+  color: #ffb733;
+}
+
+.historico-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.historico-table th,
+.historico-table td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.historico-table th {
+  background-color: #ffe0b3;
+  color: #333;
+  font-weight: 600;
+}
+
+.historico-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+canvas#graficoDistribuicao {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 300px;
+  max-height: 300px;
+}

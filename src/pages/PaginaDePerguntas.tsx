@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../styles/perguntas.css'
 
 type Pergunta = {
@@ -11,6 +12,7 @@ export default function Perguntas() {
   const [respostas, setRespostas] = useState<Record<number, boolean | null>>({})
   const [erro, setErro] = useState<string | null>(null)
   const [carregando, setCarregando] = useState(true)
+  const navigate = useNavigate()
 
   useEffect(() => {
     fetch('http://localhost:3001/api/perguntas')
@@ -45,19 +47,25 @@ export default function Perguntas() {
       return
     }
 
+    const pontuacao = Object.values(respostas).filter(r => r === true).length
+    let estratificacao = ''
+
+    if (pontuacao === 0) estratificacao = 'Sem transtorno Mental'
+    else if (pontuacao <= 7) estratificacao = 'Transtorno leve'
+    else if (pontuacao <= 14) estratificacao = 'Transtorno moderado'
+    else estratificacao = 'Transtorno grave'
+
     try {
-      const res = await fetch('http://localhost:3001/api/respostas', {
+      await fetch('http://localhost:3001/api/respostas', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          usuarioID: 1, // Substitua com o ID real
+          usuarioID: 1,
           respostas
         })
       })
 
-      const data = await res.json()
-      console.log(data)
-      // redirecionar ou mostrar feedback aqui
+      navigate('/resultado', { state: { estratificacao } })
     } catch (e) {
       setErro('Erro ao enviar respostas.')
     }
@@ -69,18 +77,15 @@ export default function Perguntas() {
 
       <div className="intro-text">
         <p>
-          A saúde mental é essencial porque influencia como pensamos, sentimos e agimos no dia a dia.
-          Ela afeta nossas relações, decisões e bem-estar geral, sendo tão importante quanto a saúde física.
+          A saúde mental é essencial porque influencia como pensamos, sentimos e agimos no dia a dia...
         </p>
         <p>
-          As perguntas abaixo são do instrumento Self Report Questionnaire (SRQ 20), para rastreamento de sofrimento mental,
-          e não de diagnóstico psiquiátrico (diagnóstico só pode ser fornecido por um profissional).
+          As perguntas abaixo são do instrumento Self Report Questionnaire (SRQ 20)...
         </p>
         <p>Para uma análise precisa, responda a todas as questões.</p>
       </div>
 
       {carregando && <p className="carregando">Carregando perguntas...</p>}
-
       {erro && <p className="erro">{erro}</p>}
 
       {!carregando && perguntas.map((p, i) => (

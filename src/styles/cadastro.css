@@ -1,13 +1,18 @@
-/* src/styles/cadastro.css */
+
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('../assets/backgroud.png'); /* ou outro fundo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffb733;
+  background-image: url('../assets/bg_cerebros.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  color: #333;
 }
+
 
 .cadastro-container {
   width: 450px;

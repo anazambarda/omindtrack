@@ -23,7 +23,7 @@ export default function Login() {
       const data = await res.json()
 
       if (data.success) {
-        navigate('/perguntas')
+        navigate('/inicio')
       } else {
         setErro(data.mensagem || 'Email ou senha inválidos.')
       }

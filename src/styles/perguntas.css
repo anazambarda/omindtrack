@@ -1,9 +1,10 @@
-body {
-  background-color: #f89f1f;
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 0;
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
 
 .perguntas-container {
   background-color: white;

@@ -1,4 +1,3 @@
-// src/routes/usuarioRoutes.ts
 import { Router } from 'express'
 import { cadastrarUsuario, loginUsuario } from '../controllers/usuarioController'
 

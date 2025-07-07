@@ -1,4 +1,4 @@
-// src/routes/respostaRoutes.ts
+
 import { Router } from 'express'
 import { salvarRespostas } from '../controllers/respostaController'
 

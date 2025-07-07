@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../assets/backgroud.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultado-main {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultado-card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resultado-card img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.resultado-card h1 {
+  color: #f89f1f;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.resultado-card h2.sem {
+  color: green;
+}
+.resultado-card h2.leve {
+  color: #ffcc00;
+}
+.resultado-card h2.moderado {
+  color: orange;
+}
+.resultado-card h2.grave {
+  color: red;
+}
+
+.resultado-card p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.btn-dash {
+  background-color: #f89f1f;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-dash:hover {
+  background-color: #e18712;
+}
