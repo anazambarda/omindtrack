@@ -88,3 +88,17 @@ body {
   padding: 10px;
   border-radius: 4px;
 }
+.btn-voltar {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid #fda916;
+  color: #fda916;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-voltar:hover {
+  background-color: #fda916;
+  color: white;
+}

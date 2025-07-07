@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { ChangeEvent, FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 import '../styles/cadastro.css'
 
 interface FormData {
@@ -11,6 +12,8 @@ interface FormData {
 }
 
 export default function Cadastro() {
+  const navigate = useNavigate()
+
   const [form, setForm] = useState<FormData>({
     nome: '',
     email: '',
@@ -40,7 +43,6 @@ export default function Cadastro() {
       const data = await res.json()
 
       if (res.ok) {
-        // redirecionar ou limpar formulário
         setForm({
           nome: '',
           email: '',
@@ -48,6 +50,9 @@ export default function Cadastro() {
           idade: '',
           sexo: ''
         })
+
+        // Redireciona para o login após cadastro com sucesso (opcional)
+        // setTimeout(() => navigate('/login'), 1000)
       } else {
         setErro(data.mensagem || 'Erro ao cadastrar.')
       }
@@ -128,6 +133,15 @@ export default function Cadastro() {
         </div>
 
         <button type="submit">Cadastrar</button>
+
+        
+        <button
+          type="button"
+          className="btn-voltar"
+          onClick={() => navigate('/')}
+        >
+          Voltar para o Login
+        </button>
 
         {erro && <p className="erro-cadastro">{erro}</p>}
       </form>
